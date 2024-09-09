@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JavaScript Assignment 2</h1>
+    <h3>1. Remove Duplicate Elements</h3>
+    <h3>2. SubString Method</h3>
+    <h3>3. ForEach Method</h3>
+    <h3>4. Some Method</h3>
+    <h3>5. Reduce Method</h3>
+    <script>
+        // Write a Javascript program that removes the duplicate elements from an array.
+        console.log('1. Remove Duplicate Elements')
+        let Duplicate=['Revanth','Yeswanth','Revanth','Ramesh','Prasanna']
+        let newarray=[...new Set(Duplicate)]
+        console.log(newarray)
+
+        // Write a Javascript program to create a new string without the first and last characters of a given string.
+        console.log('2. SubString Method')
+        let string='Revanth';
+        newstring='New String is : '+string.substring(1,6)
+        console.log(newstring)
+
+        // Write a function that takes an array of strings as input and prints each element to the console using the forEach method.
+        console.log('3. ForEach Method')
+        function arraystring(array1){
+            return array1.forEach(element => {
+                console.log(element)
+            });
+        }
+        let array1 = ['Bikes','Cars','Cycle','Scooty','Bus']
+        arraystring(array1)
+
+        //Write a function that takes an array of numbers as input and returns true if any of the numbers are negative ,otherwise false,using the some method.
+        console.log('4. Some Method')
+        function some(array){
+            return array.some(num => num<0);
+        }
+        let array = [1,2,5,8,9,-5,-2,0]
+        console.log(some(array))
+
+        //Write a function that takes an array of numbers as input,filters out the even numbers,and then returns the sum of the remaining numbers using a combination of filter and reduce methods.
+        console.log('5. Reduce Method')
+        function arraynum(Number){
+            let even = Number.filter(num => num%2==0)
+            console.log(even)
+            return even.reduce((acc, curr)=>acc+curr,0)
+        }
+        let Number = [1,2,3,4,5,6,7,8,9]
+        console.log(arraynum(Number))
+    </script>
+</body>
+</html>
